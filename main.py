@@ -24,7 +24,7 @@ def generate_plan(request: GoalRequest):
         client = openai.OpenAI(api_key=openai.api_key)  # New OpenAI API format
         
         response = client.chat.completions.create(  # Updated method
-            model="gpt-4",
+          model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are an AI assistant helping with structured execution planning."},
                 {"role": "user", "content": f"Create a structured execution plan to achieve this goal: {request.goal}"}
